@@ -1,0 +1,44 @@
+<div class="main_container">
+
+  <div class="game_container">
+    <div class="modal_dialog" [@modalInOut]="state">
+      <div>
+          <header>
+              <h1 class="modal_header gap">{{greetmsg}}</h1>
+          </header>
+          <section class="modal_content gap">
+            {{correctMsg}}            
+          </section>
+          <div class = "array_container">
+            <div class="hint_array_box hint_array_box_word hint_array_box_word_pop" *ngFor="let item of wordsArray; let i = index; " (click)="removeLetter(i);">
+          {{item.letter}}
+        </div>
+          </div>
+          <footer class="modal_footer gap">
+              <button *ngIf="showContinueBtn" class="continue_button" (click)="moveToNextLevel()">Continue</button>
+          </footer>
+      </div>
+    </div>
+    <div class="level_number">LEVEL: {{showLevelNumber}}</div>
+    <div class="image_container clearfix">
+      <div class="image_one" *ngFor="let item of gameLevelSingle.images">
+        <img [src]="item">
+      </div>
+    </div>
+      <div class="clearfix correct_words hint_array_container">
+        <div class="hint_array_box hint_array_box_word" [class.invalid]="completeClass == 'invalid'"  [class.valid]="completeClass == 'valid'" *ngFor="let item of wordsArray; let i = index; " (click)="removeLetter(i);">
+          {{item.letter}}
+        </div>
+      </div>
+
+    <div class="clearfix hint_array_container pad">
+      
+
+    
+      <div class="hint_array_box" *ngFor = "let letter of lettersArray; let i = index; " (click)="addLetter(i);">
+
+        {{letter}}
+      </div>
+  </div>
+</div>
+
