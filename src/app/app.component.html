@@ -10,7 +10,7 @@
             {{correctMsg}}            
           </section>
           <div class = "array_container">
-            <div class="hint_array_box hint_array_box_word hint_array_box_word_pop" *ngFor="let item of wordsArray; let i = index; " (click)="removeLetter(i);">
+            <div class="hint_array_box hint_array_box_word hint_array_box_word_pop" *ngFor="let item of wordsArray; let i = index; ">
           {{item.letter}}
         </div>
           </div>

@@ -1,8 +1,10 @@
 
 .level_number
-{
+{	
+	font-size: 1.4em;
 	font-weight: bold;
 	text-align: center;
+	color: #00e676;
 	margin:20px 0px;
 }
 .image_container
@@ -70,7 +72,7 @@
 	display: inline-block;
 	background:#000;
 	color:#eee;
-	border-color:#eee;
+	border-color:#888;
 }
 .invalid
 {
@@ -85,7 +87,7 @@
 
 .valid
 {
-	color:green;
+	color:#00e676;
 }
 
 @keyframes blink 
@@ -164,8 +166,10 @@
 }
 .hint_array_box_word_pop
 {
-	background: #fff;
-	color: #000;
+	background: #333;
+	color: #00e676;
+	border-bottom: 3px solid #888;
+
 }
 .array_container
 {
